@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Violetta Pet | Clínica Veterinaria</title>
+    <meta name="description"
+        content="Violetta Pet - Cuidado profesional y amoroso para tus mascotas. Consultas, peluquería, vacunas y más.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        /* Animation classes */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+
+<body data-theme="light">
+
+    <header>
+        <a href="#" class="logo">
+            <i class="fas fa-paw"></i>
+            Violetta Pet
+        </a>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#galeria">Galería</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="nav-toggle" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Cuidado profesional para tus mejores amigos</h1>
+                <p>En Violetta Pet, combinamos años de experiencia con un profundo amor por los animales para ofrecerte
+                    el mejor servicio veterinario de la ciudad.</p>
+                <div class="hero-btns">
+                    <a href="https://wa.me/YOUR_NUMBER" class="btn btn-primary">
+                        Agendar Cita <i class="fab fa-whatsapp" style="margin-left: 10px;"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="imagenes/hero-bg.png" alt="Violetta Pet Mascota"
+                    style="width: 100%; height: auto; border-radius: 30px;">
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="servicios" style="padding: 100px 5%;">
+            <h2 style="text-align: center; font-size: 3rem; margin-bottom: 50px;">Nuestros Servicios</h2>
+
+            <div class="services-grid">
+                <!-- Card 1: Medicina -->
+                <a href="medicina-general.html" class="service-card">
+                    <i class="fas fa-stethoscope"></i>
+                    <h3>Medicina General</h3>
+                    <p>Consultas preventivas, diagnóstico especializado y el mejor trato para la salud de tu mascota.
+                    </p>
+                </a>
+
+                <!-- Card 2: Peluquería -->
+                <a href="peluqueria-spa.html" class="service-card">
+                    <i class="fas fa-scissors"></i>
+                    <h3>Peluquería & Spa</h3>
+                    <p>Baños terapéuticos, cortes de raza y cuidado estético para que luzcan y se sientan increíbles.
+                    </p>
+                </a>
+
+                <!-- Card 3: Vacunación -->
+                <a href="vacunas-desparasitacion.html" class="service-card">
+                    <i class="fas fa-syringe"></i>
+                    <h3>Vacunas & Desparasitación</h3>
+                    <p>Calendarios de vacunación completos para prevenir enfermedades y mantenerlos protegidos siempre.
+                    </p>
+                </a>
+
+                <!-- Card 4: Farmacia -->
+                <a href="farmacia-veterinaria.html" class="service-card">
+                    <i class="fas fa-pills"></i>
+                    <h3>Farmacia Veterinaria</h3>
+                    <p>Contamos con los medicamentos y productos de alta calidad necesarios para su recuperación.</p>
+                </a>
+            </div>
+            <!-- Gallery Section -->
+            <section id="galeria" style="padding: 80px 5%; background-color: rgba(155, 94, 219, 0.02);">
+                <h2 style="text-align: center; font-size: 3rem; margin-bottom: 20px;">Nuestra Galería</h2>
+                <p style="text-align: center; color: var(--text-muted); margin-bottom: 50px;">Conoce a algunos de
+                    nuestros pacientes felices.</p>
+
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="imagenes/pet1.png" alt="Mascota feliz">
+                        <div class="gallery-overlay"><i class="fas fa-heart"></i></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/pet2.png" alt="Gatito curioso">
+                        <div class="gallery-overlay"><i class="fas fa-heart"></i></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/pet3.png" alt="Chequeo veterinario">
+                        <div class="gallery-overlay"><i class="fas fa-heart"></i></div>
+                    </div>
+                    <div class="gallery-item">
+                        <img src="imagenes/pet4.png" alt="Mascota durmiendo">
+                        <div class="gallery-overlay"><i class="fas fa-heart"></i></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Contact Section -->
+            <section id="contacto" style="padding: 100px 5%; text-align: center;">
+                <h2 style="font-size: 3rem; margin-bottom: 30px;">Estamos aquí para ayudarte</h2>
+                <p style="color: var(--text-muted); max-width: 600px; margin: 0 auto 50px;">
+                    Visítanos o escríbenos para agendar una cita. Tu mascota merece el mejor cuidado.
+                </p>
+
+                <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 3rem; margin-bottom: 50px;">
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                        <i class="fas fa-location-dot" style="font-size: 2rem; color: var(--primary);"></i>
+                        <p>Calle Ficticia 123, Ciudad</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                        <i class="fas fa-clock" style="font-size: 2rem; color: var(--primary);"></i>
+                        <p>Lun - Sáb: 8:00 AM - 6:00 PM</p>
+                    </div>
+                    <div style="display: flex; flex-direction: column; align-items: center; gap: 10px;">
+                        <i class="fas fa-phone" style="font-size: 2rem; color: var(--primary);"></i>
+                        <p>+57 300 000 0000</p>
+                    </div>
+                </div>
+
+                <a href="https://wa.me/YOUR_NUMBER" class="btn btn-primary"
+                    style="font-size: 1.2rem; padding: 1.2rem 3rem;">
+                    Hablar por WhatsApp <i class="fab fa-whatsapp" style="margin-left: 10px;"></i>
+                </a>
+            </section>
+    </main>
+
+    <footer
+        style="padding: 50px 5%; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted);">
+        <p>&copy; 2024 Violetta Pet. Todos los derechos reservados. | Diseñado con amor por las mascotas.</p>
+    </footer>
+
+    <script>
+        // Theme Toggle Logic
+        const themeBtn = document.getElementById('theme-btn');
+        const body = document.body;
+        const icon = themeBtn.querySelector('i');
+
+        themeBtn.addEventListener('click', () => {
+            const isDark = body.getAttribute('data-theme') === 'dark';
+            body.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            icon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+
+            // LocalStorage persistence
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        });
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        menuBtn.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            const icon = menuBtn.querySelector('i');
+            icon.classList.toggle('fa-bars');
+            icon.classList.toggle('fa-times');
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('nav a').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                menuBtn.querySelector('i').className = 'fas fa-bars';
+            });
+        });
+
+        // Scroll Reveal Logic
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section').forEach(section => {
+            section.classList.add('reveal');
+            observer.observe(section);
+        });
+
+        // Load saved theme
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            body.setAttribute('data-theme', savedTheme);
+            icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Medicina General | Violetta Pet</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        .service-detail {
+            padding: 120px 5% 60px;
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .service-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        /* Intro Section */
+        .intro-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .info-card {
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 24px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .info-card h3 {
+            color: var(--primary);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .check-list {
+            list-style: none;
+        }
+
+        .check-list li {
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            color: var(--text-main);
+        }
+
+        .check-list i {
+            color: var(--secondary);
+        }
+
+        /* Warning Signs Section */
+        .warning-section {
+            background: var(--bg-card);
+            padding: 60px 5%;
+            border-radius: 30px;
+            margin-bottom: 80px;
+            border: 2px solid #feb2b2;
+            text-align: center;
+        }
+
+        .warning-section h2 {
+            color: #c53030;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .warning-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .warning-item {
+            background: var(--bg-main);
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            border: 1px solid rgba(245, 101, 101, 0.2);
+            color: var(--text-main);
+        }
+
+        .warning-item i {
+            font-size: 1.5rem;
+            color: #f56565;
+            margin-bottom: 10px;
+        }
+
+        /* Horizontal Layout for info */
+        .feature-row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .feature-box {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 20px;
+            border-bottom: 5px solid var(--primary);
+        }
+
+        .feature-box i {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 900px) {
+            .intro-block {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body data-theme="light">
+
+    <header>
+        <a href="index.html" class="logo">
+            <i class="fas fa-paw"></i>
+            Violetta Pet
+        </a>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#galeria">Galería</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="nav-toggle" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="service-detail">
+        <div class="service-header">
+            <h1>Medicina General</h1>
+            <p style="font-size: 1.3rem; color: var(--text-muted);">Cuidamos la salud de tu mascota en cada etapa de su
+                vida.</p>
+        </div>
+
+        <!-- Section: Intro and Consultation Details -->
+        <div class="responsive-grid">
+            <div class="intro-text">
+                <p style="font-size: 1.15rem; color: var(--text-main); line-height: 1.8; margin-bottom: 30px;">
+                    En <strong>Violetta Pet</strong>, la medicina general es el pilar de nuestro servicio. Combinamos un
+                    enfoque premium de prevención con diagnóstico de alta precisión para asegurar que tu mascota
+                    disfrute de una vida plena y saludable junto a ti.
+                </p>
+                <div class="info-card">
+                    <h3><i class="fas fa-magnifying-glass-chart"></i> ¿Qué incluye la consulta?</h3>
+                    <ul class="check-list">
+                        <li><i class="fas fa-check"></i> Evaluación física completa céfalo-caudal.</li>
+                        <li><i class="fas fa-check"></i> Revisión exhaustiva de signos vitales.</li>
+                        <li><i class="fas fa-check"></i> Diagnóstico clínico especializado.</li>
+                        <li><i class="fas fa-check"></i> Recomendación de tratamiento personalizado.</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="intro-image">
+                <img src="imagenes/pet3.png" alt="Veterinario atendiendo"
+                    style="width: 100%; border-radius: 30px; box-shadow: var(--shadow);">
+            </div>
+        </div>
+
+        <!-- Section: Services List -->
+        <div class="feature-row">
+            <div class="feature-box">
+                <i class="fas fa-heart-pulse"></i>
+                <h3>Atención Integral</h3>
+                <p>Tratamiento de enfermedades comunes digestivas, respiratorias o dermatológicas.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-weight-scale"></i>
+                <h3>Control & Nutrición</h3>
+                <p>Asesoría nutricional y seguimiento de peso para prevenir la obesidad y otras afecciones.</p>
+            </div>
+            <div class="feature-box">
+                <i class="fas fa-user-doctor"></i>
+                <h3>Enfoque Preventivo</h3>
+                <p>Chequeos periódicos para la detección temprana de enfermedades y mejor calidad de vida.</p>
+            </div>
+        </div>
+
+        <!-- Section: Warning Signs -->
+        <section class="warning-section">
+            <h2>⚠️ Señales de Alerta</h2>
+            <p style="text-align: center; color: var(--text-muted); margin-bottom: 40px; font-style: italic;">
+                Si notas alguno de estos signos en tu mascota, es importante acudir a consulta médica de inmediato:
+            </p>
+            <div class="warning-grid">
+                <div class="warning-item">
+                    <i class="fas fa-utensils"></i>
+                    <p>Falta de apetito</p>
+                </div>
+                <div class="warning-item">
+                    <i class="fas fa-zzz"></i>
+                    <p>Decaimiento o apatía</p>
+                </div>
+                <div class="warning-item">
+                    <i class="fas fa-face-frown-open"></i>
+                    <p>Vómito o diarrea</p>
+                </div>
+                <div class="warning-item">
+                    <i class="fas fa-dog"></i>
+                    <p>Cambios en conducta</p>
+                </div>
+                <div class="warning-item">
+                    <i class="fas fa-hand-dots"></i>
+                    <p>Problemas en piel</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <div style="text-align: center; padding: 40px 0;">
+            <h2 style="margin-bottom: 25px;">Agenda una valoración médica para tu mascota</h2>
+            <a href="https://wa.me/YOUR_NUMBER" class="btn btn-primary"
+                style="font-size: 1.25rem; padding: 1.2rem 3rem;">
+                Agendar hoy mismo <i class="fab fa-whatsapp" style="margin-left: 10px;"></i>
+            </a>
+            <p style="margin-top: 20px; color: var(--text-muted);">Confía en los expertos, confía en <strong>Violetta
+                    Pet</strong>.</p>
+        </div>
+    </main>
+
+    <footer
+        style="padding: 50px 5%; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted);">
+        <p>&copy; 2024 Violetta Pet. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const themeBtn = document.getElementById('theme-btn');
+        const body = document.body;
+        const icon = themeBtn.querySelector('i');
+
+        themeBtn.addEventListener('click', () => {
+            const isDark = body.getAttribute('data-theme') === 'dark';
+            body.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            icon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        });
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            body.setAttribute('data-theme', savedTheme);
+            icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (menuBtn && navMenu) {
+            menuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const menuIcon = menuBtn.querySelector('i');
+                menuIcon.classList.toggle('fa-bars');
+                menuIcon.classList.toggle('fa-times');
+            });
+
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    menuBtn.querySelector('i').className = 'fas fa-bars';
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>

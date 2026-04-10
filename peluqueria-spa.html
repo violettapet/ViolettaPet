@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peluquería & Spa | Violetta Pet</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        :root {
+            --violetta-purple: #6a2c91;
+            --violetta-orange: #ff8500;
+        }
+
+        .service-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .service-header h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            color: var(--primary);
+        }
+
+        .service-detail {
+            padding: 120px 5% 60px;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--violetta-purple);
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+        }
+
+        /* Group Pricing Section */
+        .pricing-section {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 80px;
+        }
+
+        .pricing-card {
+            background: white;
+            border: 1px solid #eee;
+            border-radius: 0;
+            /* Match the more 'square' post look */
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            text-align: left;
+        }
+
+        .pricing-card:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+        }
+
+        .pricing-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .pricing-content {
+            padding: 20px 0;
+            /* Padding only top/bottom if we want edge-to-edge look like a post */
+        }
+
+        .pricing-content h3 {
+            color: var(--violetta-purple);
+            font-size: 1.6rem;
+            margin-bottom: 2px;
+            padding: 0 5px;
+        }
+
+        .pricing-content .weight {
+            color: #7d4ba7;
+            font-size: 1rem;
+            margin-bottom: 15px;
+            padding: 0 5px;
+        }
+
+        .price-item {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 5px;
+            padding: 0 5px;
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .btn-solicitar {
+            background-color: var(--violetta-orange);
+            color: white;
+            text-align: center;
+            padding: 12px;
+            text-decoration: none;
+            font-weight: 700;
+            text-transform: uppercase;
+            border-radius: 0;
+            margin-top: 15px;
+            font-size: 0.9rem;
+        }
+
+        .btn-solicitar:hover {
+            background-color: #e67700;
+        }
+
+        /* horizontal detail section */
+        .corte-section {
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            overflow: hidden;
+            align-items: center;
+            margin-top: 60px;
+            margin-bottom: 40px;
+        }
+
+        .corte-image {
+            height: 100%;
+            min-height: 400px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .corte-content {
+            padding: 50px;
+            text-align: center;
+        }
+
+        .corte-content h2 {
+            color: var(--violetta-purple);
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+            text-transform: uppercase;
+        }
+
+        .corte-list {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+
+        .corte-list li {
+            margin-bottom: 12px;
+            font-size: 1.15rem;
+            color: #444;
+            display: flex;
+            justify-content: center;
+            gap: 8px;
+        }
+
+        .corte-list span {
+            color: #777;
+        }
+
+        .corte-content .btn-solicitar {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        @media (max-width: 900px) {
+            .pricing-section {
+                grid-template-columns: 1fr;
+            }
+
+            .corte-section {
+                grid-template-columns: 1fr;
+            }
+
+            .corte-image {
+                height: 300px;
+            }
+        }
+    </style>
+</head>
+
+<body data-theme="light">
+
+    <header>
+        <a href="index.html" class="logo">
+            <i class="fas fa-paw"></i>
+            Violetta Pet
+        </a>
+        <nav id="nav-menu">
+            <ul>
+                <li><a href="index.html#inicio">Inicio</a></li>
+                <li><a href="index.html#servicios">Servicios</a></li>
+                <li><a href="index.html#galeria">Galería</a></li>
+                <li><a href="index.html#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+        <div class="nav-actions">
+            <button class="theme-toggle" id="theme-btn">
+                <i class="fas fa-moon"></i>
+            </button>
+            <button class="nav-toggle" id="menu-btn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="service-detail">
+
+        <!-- New: Intro Section -->
+        <section class="intro-section" style="margin-bottom: 80px;">
+            <div class="service-header">
+                <h1>Peluquería y Spa</h1>
+                <p style="font-size: 1.3rem; color: var(--text-muted);">El cuidado de tu mascota no es solo estética, es
+                    salud.</p>
+            </div>
+
+            <div class="responsive-grid" style="margin-top: 40px;">
+                <div class="intro-text">
+                    <p style="font-size: 1.1rem; color: var(--text-muted); margin-bottom: 25px; line-height: 1.8;">
+                        Los baños regulares ayudan a mantener la piel y el pelaje de tu mascota en óptimas condiciones,
+                        eliminando suciedad, bacterias y malos olores. Un adecuado servicio de peluquería permite:
+                    </p>
+                    <ul class="corte-list" style="text-align: left; margin-bottom: 30px;">
+                        <li style="justify-content: flex-start;"><i class="fas fa-check-circle"
+                                style="color: var(--secondary);"></i> Prevenir enfermedades en la piel</li>
+                        <li style="justify-content: flex-start;"><i class="fas fa-check-circle"
+                                style="color: var(--secondary);"></i> Detectar a tiempo parásitos como pulgas o
+                            garrapatas</li>
+                        <li style="justify-content: flex-start;"><i class="fas fa-check-circle"
+                                style="color: var(--secondary);"></i> Evitar enredos y acumulación de suciedad en el
+                            pelaje</li>
+                        <li style="justify-content: flex-start;"><i class="fas fa-check-circle"
+                                style="color: var(--secondary);"></i> Mantener a tu mascota cómoda, limpia y feliz</li>
+                    </ul>
+                    <p style="font-size: 1.1rem; color: var(--text-muted); line-height: 1.8;">
+                        Además, el corte de pelo y el cuidado estético son importantes según la raza, el clima y el
+                        estilo de vida de tu mascota. En nuestro servicio de spa, utilizamos productos especializados
+                        que protegen la piel y brindan una experiencia relajante y segura.
+                    </p>
+                </div>
+                <div
+                    style="background: #e1f5fe; padding: 40px; border-radius: 30px; border-left: 8px solid var(--primary); display: flex; flex-direction: column; justify-content: center; height: 100%;">
+                    <i class="fas fa-quote-left"
+                        style="font-size: 2rem; color: var(--primary); opacity: 0.3; margin-bottom: 20px;"></i>
+                    <h3 style="font-size: 1.8rem; color: var(--violetta-purple); line-height: 1.4;">“Un baño a tiempo no
+                        solo mejora su apariencia, también protege su salud.”</h3>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 1: Pricing by Size (Moved below intro) -->
+        <h2 class="section-title">Planes por Tamaño</h2>
+        <div class="pricing-section">
+            <!-- Pequeño -->
+            <div class="pricing-card">
+                <img src="imagenes/dog-pequeno.png" alt="Perro Pequeño">
+                <div class="pricing-content">
+                    <h3>Pequeño</h3>
+                    <p class="weight">Menos de 10Kg</p>
+                    <div class="price-item"><span>Pelo Corto:</span> $57.000</div>
+                    <div class="price-item"><span>Pelo Largo:</span> $63.000</div>
+                    <a href="https://wa.me/YOUR_NUMBER" class="btn-solicitar">Solicitar Cita</a>
+                </div>
+            </div>
+
+            <!-- Mediano -->
+            <div class="pricing-card">
+                <img src="imagenes/dog-mediano.png" alt="Perro Mediano">
+                <div class="pricing-content">
+                    <h3>Mediano</h3>
+                    <p class="weight">Entre 10 y 20 Kg</p>
+                    <div class="price-item"><span>Pelo Corto:</span> $63.000</div>
+                    <div class="price-item"><span>Pelo Largo:</span> $67.000</div>
+                    <a href="https://wa.me/YOUR_NUMBER" class="btn-solicitar">Solicitar Cita</a>
+                </div>
+            </div>
+
+            <!-- Grande -->
+            <div class="pricing-card">
+                <img src="imagenes/dog-grande.png" alt="Perro Grande">
+                <div class="pricing-content">
+                    <h3>Grande</h3>
+                    <p class="weight">Entre 20 y 40Kg</p>
+                    <div class="price-item"><span>Pelo Corto:</span> $79.000</div>
+                    <div class="price-item"><span>Pelo Largo:</span> $91.000</div>
+                    <a href="https://wa.me/YOUR_NUMBER" class="btn-solicitar">Solicitar Cita</a>
+                </div>
+            </div>
+
+            <!-- Gigante -->
+            <div class="pricing-card">
+                <img src="imagenes/pet4.png" alt="Perro Gigante">
+                <div class="pricing-content">
+                    <h3>Gigante</h3>
+                    <p class="weight">Más de 40Kg</p>
+                    <div class="price-item"><span>Pelo Corto:</span> $97.000</div>
+                    <div class="price-item"><span>Pelo Largo:</span> $108.000</div>
+                    <a href="https://wa.me/YOUR_NUMBER" class="btn-solicitar">Solicitar Cita</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section 2: Corte para tu mascota (Horizontal) -->
+        <div class="corte-section">
+            <div class="corte-image" style="background-image: url('imagenes/pet3.png');"></div>
+            <div class="corte-content">
+                <h2>Corte para tu mascota</h2>
+                <ul class="corte-list">
+                    <li>Cepillado desde <strong>$20.000</strong></li>
+                    <li>Desenredado desde <strong>$25.000</strong></li>
+                    <li>Corte higiénico desde <strong>$12.000</strong></li>
+                    <li>Corte sin baño desde <strong>$30.000</strong></li>
+                    <li>Corte de uñas: <strong>$20.000</strong></li>
+                    <li>Limpieza superficial de dientes: <strong>$10.000</strong></li>
+                </ul>
+                <a href="https://wa.me/YOUR_NUMBER" class="btn-solicitar">Solicitar Cita</a>
+            </div>
+        </div>
+
+    </main>
+
+    <footer
+        style="padding: 50px 5%; border-top: 1px solid var(--border); text-align: center; color: var(--text-muted);">
+        <p>&copy; 2024 Violetta Pet. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        const themeBtn = document.getElementById('theme-btn');
+        const body = document.body;
+        const icon = themeBtn.querySelector('i');
+
+        themeBtn.addEventListener('click', () => {
+            const isDark = body.getAttribute('data-theme') === 'dark';
+            body.setAttribute('data-theme', isDark ? 'light' : 'dark');
+            icon.className = isDark ? 'fas fa-moon' : 'fas fa-sun';
+            localStorage.setItem('theme', isDark ? 'light' : 'dark');
+        });
+
+        const savedTheme = localStorage.getItem('theme');
+        if (savedTheme) {
+            body.setAttribute('data-theme', savedTheme);
+            icon.className = savedTheme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
+        }
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const navMenu = document.getElementById('nav-menu');
+
+        if (menuBtn && navMenu) {
+            menuBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                const menuIcon = menuBtn.querySelector('i');
+                menuIcon.classList.toggle('fa-bars');
+                menuIcon.classList.toggle('fa-times');
+            });
+
+            document.querySelectorAll('nav a').forEach(link => {
+                link.addEventListener('click', () => {
+                    navMenu.classList.remove('active');
+                    menuBtn.querySelector('i').className = 'fas fa-bars';
+                });
+            });
+        }
+    </script>
+</body>
+
+</html>
