@@ -386,6 +386,91 @@ nav a:hover {
     }
 }
 
+/* Testimonials Section */
+.testimonials-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.testimonial-card {
+    background: var(--bg-card);
+    padding: 2.5rem;
+    border-radius: 24px;
+    border: 1px solid var(--border);
+    transition: var(--transition);
+    position: relative;
+    box-shadow: var(--shadow);
+}
+
+.testimonial-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--primary);
+}
+
+.testimonial-card i.quote-icon {
+    font-size: 2.5rem;
+    color: var(--primary);
+    opacity: 0.8;
+    position: absolute;
+    top: 1.5rem;
+    right: 2rem;
+}
+
+.stars {
+    color: #ffb800;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.testimonial-text {
+    font-style: italic;
+    color: var(--text-main);
+    margin-bottom: 1.5rem;
+    position: relative;
+    z-index: 1;
+}
+
+.testimonial-author {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.author-info h4 {
+    font-size: 1.1rem;
+    margin: 0;
+    color: var(--text-main);
+}
+
+.author-info p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .testimonials-grid {
+        grid-template-columns: 1fr !important;
+    }
+}
+
+/* Swiper Custom Pagination */
+.swiper-pagination-bullet-active {
+    background: var(--primary) !important;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    opacity: 0.3;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
 /* Responsive Content Grids */
 .responsive-grid {
     display: grid;
